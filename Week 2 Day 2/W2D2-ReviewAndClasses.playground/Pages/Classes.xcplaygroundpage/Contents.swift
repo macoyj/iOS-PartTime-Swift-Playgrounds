@@ -49,21 +49,72 @@ box1.area()
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
 
+class Bicycle{
+    
+    var numberOfGears: Int
+    var currentGear: Int
+    
+    init(numberOfGears:Int, currentGear:Int){
+        
+        if currentGear > numberOfGears {
+            
+            self.numberOfGears = currentGear
+            
+        } else {
+            
+            self.numberOfGears = numberOfGears
+        
+        }
+        
+        self.currentGear = currentGear
+        
+    }
+    
+    func gearUp(){
+    
+        if(currentGear < numberOfGears){
+            
+            currentGear = currentGear + 1
+            
+        }else{
+            
+            print("You're in top gear!")
+            
+        }
+      
+    }
+    
+    
+    func gearDown(){
+        
+        if(currentGear < numberOfGears){
+            
+            currentGear = currentGear - 1
+            
+        }else{
+            
+            print("You're in bottom gear!")
+            
+        }
 
+        
+    }
+    
+}
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
+var myBike = Bicycle(numberOfGears: 3, currentGear: 2)
 //
-//myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
+myBike.numberOfGears = 16 // upgrade!
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
 //
-//print("my bike is in the \(myBike.currentGear)rd gear")
+print("my bike is in the \(myBike.currentGear)th gear")
 
 
 //: ## Challenge 2

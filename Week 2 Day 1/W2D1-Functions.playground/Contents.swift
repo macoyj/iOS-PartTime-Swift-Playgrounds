@@ -37,7 +37,7 @@ func greet(name: String) {
 //: Hint: put your name, wrapped in quotes, between the parentheses `()`.
 
 
-
+greet("Macoy")
 
 //: ### Challenge 2
 //:
